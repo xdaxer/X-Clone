@@ -1,0 +1,171 @@
+@use "../../../colors.scss" as colors;
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #ffffff30;
+  flex: 1;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  h2 {
+    font-size: 8rem;
+    line-height: 9rem;
+    font-family: "Chirp-Bold";
+  }
+
+  span {
+    color: #ffffff70;
+    font-size: 4rem;
+    line-height: 5rem;
+    font-family: "Chirp-Regular";
+  }
+
+  button {
+    background: colors.$baseColor;
+    color: colors.$textColor;
+    width: fit-content;
+    font-family: "Chirp-Bold";
+    font-size: 4rem;
+    line-height: 5rem;
+    padding: 6rem 8rem;
+  }
+}
+
+.message {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .topBar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+
+    .userInfo {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      img {
+        height: 8rem;
+        border-radius: 999rem;
+      }
+
+      b {
+        font-size: 4rem;
+        line-height: 5rem;
+      }
+    }
+  }
+
+  .inputBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: #202327;
+
+    .iconButton {
+      width: fit-content;
+      height: fit-content;
+      background: transparent;
+
+      &:hover {
+        background: #1d9bf030;
+      }
+      padding: 2rem;
+      img {
+        height: 5rem;
+      }
+    }
+
+    input {
+      flex: 1;
+      background: transparent;
+      border: none;
+    }
+
+    .sendButton {
+      width: fit-content;
+      height: fit-content;
+      align-items: center;
+      background: transparent;
+
+      &:disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.messageBox {
+  flex: 1;
+  overflow: auto;
+  padding: 4rem;
+
+
+  .me {
+    width: 100%;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: right;
+    display: flex;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+
+    .messageContent {
+      background-color: colors.$baseColor;
+      border-radius: 100rem 100rem 0rem 100rem;
+      padding: 2rem;
+      text-wrap: wrap;
+    }
+  }
+
+  .you {
+    width: 100%;
+    font-size: 5rem;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+
+    .messageContent {
+      background-color: #ffffff70;
+      border-radius: 100rem 100rem 100rem 0rem;
+      padding: 2rem;
+      text-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  }
+  .messageContent {
+    padding: 2rem 3rem;
+    font-family: "Chirp-Regular";
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #404040;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffffff70;
+    border-radius: 999px;
+  }
+}

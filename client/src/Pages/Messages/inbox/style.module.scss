@@ -1,0 +1,119 @@
+@use "../../../colors.scss" as colors;
+
+.inbox {
+  width: 112rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-left: #ffffff30 solid 1px;
+  border-right: #ffffff30 solid 1px;
+ 
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+
+    h2 {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 2rem;
+
+      img {
+        height: 5rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 3rem;
+    width: 70rem;
+    margin: 10% auto;
+    h1 {
+      font-size: 8rem;
+      line-height: 9rem;
+      font-family: "Chirp-Bold";
+    }
+    span {
+      font-size: 4rem;
+      line-height: 5rem;
+      color: #ffffff70;
+      font-family: "Chirp-Regular";
+    }
+    button {
+      background: colors.$baseColor;
+      color: colors.$textColor;
+      font-family: "Chirp-Bold";
+      font-size: 4rem;
+      line-height: 5rem;
+      width: 36rem;
+      height: 13rem;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #404040;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffffff70;
+    border-radius: 999px;
+  }
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 0;
+  .user {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    padding: 4rem;
+    cursor: pointer;
+    transition: background 300ms;
+
+    &:hover {
+      background: #ffffff20;
+    }
+    img {
+      height: 10rem;
+      border-radius: 999rem;
+    }
+    .name {
+      display: flex;
+
+      b {
+        font-size: 4rem;
+        line-height: 5rem;
+      }
+
+      span {
+        font-size: 4rem;
+        line-height: 5rem;
+        color: #ffffff70;
+      }
+    }
+  }
+
+  .active {
+    background: #1d9bf020;
+    border-right: 2px solid #1d9bf0;
+
+    &:hover {
+      background: #1d9bf040;
+    }
+  }
+}

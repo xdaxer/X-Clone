@@ -1,0 +1,37 @@
+{
+  "name": "xclone-backend",
+  "version": "0.0.0",
+  "description": "backend for x clone",
+  "keywords": [
+  "X Clone Backend","Twitter Clone Backend"  ],
+  "license": "ISC",
+  "author": "Abdullah `Daxer` Yirik",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon -q app.js",
+    "lint": "eslint --fix .",
+    "format": "prettier --write .",
+    "fix": "npm run lint && npm run format"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^16.1.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^11.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.1",
+    "sharp": "^0.34.2",
+    "socket.io": "^4.8.1"
+  }
+}

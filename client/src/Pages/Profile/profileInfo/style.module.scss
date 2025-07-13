@@ -1,0 +1,203 @@
+@use "../../../colors.scss" as colors;
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ffffff30;
+  border-left: 1px solid #ffffff30;
+ 
+  min-height: 100vh;
+
+
+  .topMenu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+
+    .left {
+      display: flex;
+      gap: 6rem;
+      .backButton {
+        background: transparent;
+        border: none;
+        width: fit-content;
+        height: fit-content;
+        padding: 2rem;
+        img {
+          height: 4rem;
+        }
+        &:hover {
+          background-color: #ffffff60;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        b {
+          color: #ffffff;
+          font-size: 5rem;
+          font-family: "Chirp-Medium";
+          font-weight: 600;
+          line-height: 6rem;
+        }
+
+        span {
+          color: #ffffff60;
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+      }
+    }
+
+    .searchIcon {
+      width: fit-content;
+      height: fit-content;
+      background: transparent;
+      padding: 2rem;
+
+      img {
+        height: 4.5rem;
+      }
+
+      &:hover {
+        background-color: #ffffff60;
+      }
+    }
+  }
+
+  .banner {
+    position: relative;
+    user-select: none;
+    .bannerImage {
+      height: 50rem;
+      width: 100%;
+    }
+
+    .profilePicture {
+      height: 33rem;
+      border-radius: 999rem;
+      position: absolute;
+      bottom: -15rem;
+      left: 4rem;
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 3rem 4rem;
+    gap: 2rem;
+
+    .iconButtons {
+      display: flex;
+      gap: 2rem;
+
+      button {
+        background: transparent;
+        width: fit-content;
+        height: fit-content;
+        padding: 1rem;
+        border-radius: 999rem;
+        border: 1px solid #ffffff30;
+        align-items: center;
+        img {
+          height: 5rem;
+        }
+        &:hover {
+          background-color: #ffffff20;
+        }
+      }
+    }
+
+    .followButton {
+      width: fit-content;
+      height: fit-content;
+      color: #000000;
+      padding: 2rem 4rem;
+      font-family: "Chirp-Medium";
+    }
+  }
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 5rem 4rem;
+    border-bottom: 1px solid #ffffff30;
+    .username {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      b {
+        color: #ffffff;
+        font-size: 5rem;
+        line-height: 6rem;
+        font-family: "Chirp-Regular";
+      }
+
+      span {
+        color: #ffffff70;
+        font-size: 4rem;
+        line-height: 5rem;
+        font-family: "Chirp-Regular";
+      }
+    }
+
+    .biography {
+      font-size: 4rem;
+      line-height: 5rem;
+      font-family: "Chirp-Regular";
+    }
+
+    .tags {
+      display: flex;
+      gap: 4rem;
+      flex-wrap: wrap;
+
+      div {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        img {
+          height: 4rem;
+        }
+
+        span {
+          font-size: 4rem;
+          color: #ffffff70;
+          font-family: "Chirp-Regular";
+        }
+
+        a {
+          color: colors.$baseColor;
+          text-decoration: none;
+        }
+      }
+
+      
+    }
+
+
+    .followers{
+      display: flex;
+      gap: 4rem;
+
+      span{
+        color: #ffffff60;
+        font-size: 3.5rem;
+
+        label{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

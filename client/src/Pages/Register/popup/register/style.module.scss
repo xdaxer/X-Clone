@@ -1,0 +1,115 @@
+@use "../../../../colors.scss" as colors;
+.popupBackDrop {
+  width: 100%;
+  height: 100%;
+  background-color: #1d9bf015;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .popup {
+    position: fixed;
+    background: colors.$backgroundColor;
+    width: 150rem;
+    height: 160rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4rem;
+    gap: 7rem;
+
+    h2 {
+      font-size: 8rem;
+      line-height: 9rem;
+      font-weight: 400;
+      font-family: "Chirp-Bold", serif;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7rem;
+      justify-content: center;
+
+      input {
+        background-color: transparent;
+        width: 100rem;
+        height: 15rem;
+        padding: 0 10px;
+        border: 0.5rem solid colors.$ButtonHoverColor;
+        font-size: 4rem;
+        border-radius: 1rem;
+
+        &:focus {
+          border: 0.5rem solid colors.$baseColor;
+        }
+      }
+
+      button {
+        text-align: center;
+        background-color: colors.$textColor;
+        color: colors.$backgroundColor;
+        width: 100%;
+        height: 12rem;
+        font-size: 4rem;
+        font-weight: 600;
+        border-radius: 999rem;
+        cursor: pointer;
+        font-family: "Chirp-Bold", serif;
+
+        &:hover {
+          transition: 300ms;
+          background: #ddd;
+        }
+
+        &:disabled {
+          background: #696969;
+        }
+      }
+    }
+  }
+}
+
+.closePopup {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  background: colors.$backgroundColor;
+  border: none;
+  cursor: pointer;
+  border-radius: 999rem;
+  padding: 2rem;
+  display: flex;
+  width: 10rem;
+
+  &:hover {
+    background: #3333;
+  }
+
+  img {
+    height: 5rem;
+  }
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  img {
+    height: 8rem;
+  }
+}
+
+
+.error{
+    color: red;
+    font-size: 4rem;
+    font-weight: 600;
+}

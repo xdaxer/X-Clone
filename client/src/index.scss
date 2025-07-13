@@ -1,0 +1,98 @@
+@use "./colors.scss" as colors;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: "times";
+  src: url("/fonts/times.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chirp-Medium";
+  src: url("/fonts/Chirp-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chirp-Regular";
+  src: url("/fonts/Chirp-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chirp-Bold";
+  src: url("/fonts/Chirp-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chirp-Extended-Heavy";
+  src: url("/fonts/Chirp-Extended-Heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-size: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  color: colors.$textColor;
+  fill: colors.$textColor;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: colors.$backgroundColor;
+}
+
+.container {
+  width: 320rem;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+ .deviceErr{
+  display: none;
+ }
+
+
+@media only screen and (max-width: 1280px) {
+
+  *{
+    display: flex !important;
+  }
+
+  .deviceErr {
+    display: flex !important;
+    font-size: 16rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    color: colors.$baseColor;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,84 @@
+@use "../../../colors.scss" as colors;
+
+.FollowList {
+  display: flex;
+  min-width: 87rem;
+  flex-direction: column;
+  gap: 3rem;
+  border: 2px solid #ffffff30;
+  border-radius: 4rem;
+  margin-top: 2rem;
+  height: fit-content;
+  
+ 
+  a {
+    text-decoration: none;
+    display: flex;
+    flex: 1;
+  }
+
+  .title {
+    font-size: 5rem;
+    line-height: 6rem;
+    font-family: "Chirp-Extended-Heavy";
+    margin: 3rem 4rem;
+  }
+
+  .user {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      transition: 100ms;
+      background: #ffffff30;
+    }
+  }
+  .userInfo {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    img {
+      height: 10rem;
+      border-radius: 999rem;
+    }
+    .name {
+      display: flex;
+      flex-direction: column;
+
+      b {
+        font-size: 4rem;
+        line-height: 5rem;
+        font-family: "Chirp-Bold";
+      }
+
+      span {
+        font-size: 4rem;
+        line-height: 5rem;
+        color: #ffffff70;
+        font-family: "Chirp-Regular";
+      }
+    }
+  }
+
+  button {
+    width: 20rem;
+    height: 8rem;
+    background: #fff;
+    color: #000;
+    font-family: "Chirp-Bold";
+    align-self: center;
+    font-size: 3rem;
+  }
+}
+
+.more {
+  color: colors.$baseColor;
+  font-size: 4rem;
+  line-height: 5rem;
+  font-family: "Chirp-Regular";
+  margin: 4rem;
+  cursor: pointer;
+}

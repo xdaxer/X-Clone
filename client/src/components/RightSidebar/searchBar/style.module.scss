@@ -1,0 +1,30 @@
+@use "../../../colors.scss" as colors;
+
+.searchBar {
+  display: flex;
+  width: 87rem;
+  height: 10rem;
+  border: 2px solid colors.$ButtonHoverColor;
+  border-radius: 999rem;
+  align-items: center;
+  padding: 3rem 3rem;
+  gap: 3rem;
+  user-select: none;
+  position: fixed;
+  background: colors.$backgroundColor;
+
+  img {
+    height: 4rem;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    color: colors.$textColor;
+  }
+
+  input::placeholder {
+    color: colors.$textColor;
+  }
+}

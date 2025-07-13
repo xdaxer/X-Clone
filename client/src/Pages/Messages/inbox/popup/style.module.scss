@@ -1,0 +1,78 @@
+@use "../../../../colors.scss" as colors;
+.popupBackDrop {
+  width: 100%;
+  height: 100%;
+  background-color: #1d9bf015;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .popup {
+    position: fixed;
+    background: colors.$backgroundColor;
+    width: 150rem;
+    height: 160rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4rem;
+    z-index: 1;
+
+    .topMenu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 10%;
+
+      h2 {
+        font-size: 5rem;
+        line-height: 6rem;
+        font-family: "Chirp-Regular";
+      }
+    }
+
+    .searchBar {
+      width: 100%;
+      display: flex;
+      padding: 4rem 5rem;
+      border-bottom: 1px solid #ffffff70;
+      align-items: center;
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: transparent;
+        padding: 0rem 5rem;
+      }
+
+      img {
+        height: 5rem;
+      }
+    }
+  }
+}
+.closePopup {
+  position: fixed;
+  left: 2rem;
+  top: 2rem;
+  background: colors.$backgroundColor;
+  border: none;
+  cursor: pointer;
+  border-radius: 999rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+
+  &:hover {
+    background: #3333;
+  }
+
+  img {
+    height: 5rem;
+  }
+}

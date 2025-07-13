@@ -1,0 +1,121 @@
+@use "../../../../colors.scss" as colors;
+
+.SharePost {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ffffff30;
+  min-height: 40rem;
+  height: fit-content;
+  justify-content: space-between;
+  padding: 2rem 0;
+
+  .inputBox {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    align-self: center;
+    width: 143rem;
+    height: 100%;
+    justify-content: center;
+
+    .profilePicture {
+      height: 10rem;
+      border-radius: 999rem;
+    }
+    textarea {
+      resize: none;
+      overflow: auto;
+      scrollbar-width: auto;
+      scrollbar-color: #000000 #404040;
+      width: 100%;
+      background: transparent;
+      border: none;
+      font-size: 5rem;
+      line-height: 6rem;
+      height: 100%;
+      font-family: "Chirp-Regular";
+      padding: 2rem 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #404040;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ffffff70;
+      border-radius: 999px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    width: 120rem;
+    padding: 2rem 0;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+
+    .iconButton {
+      display: flex;
+
+      button {
+        background: transparent;
+        width: 10rem;
+
+        img {
+          height: 5rem;
+        }
+
+        &:hover {
+          background: #1d9bf030;
+        }
+      }
+    }
+
+    .shareButton {
+      width: fit-content;
+      padding: 0 4rem;
+      height: 9rem;
+      font-size: 4rem;
+      line-height: 5rem;
+      font-family: "Chirp-Bold";
+      background: #fff;
+
+      &:disabled {
+        background: #ffffff70;
+      }
+    }
+  }
+  .uploadImage {
+    opacity: 0;
+    position: absolute;
+    background-color: red;
+    height: 10rem;
+    width: 10rem;
+    cursor: pointer;
+  }
+}
+
+.image {
+  position: relative;
+  
+  .postImage {
+    padding: 5rem;
+    width: 150rem;
+    border-radius: 10rem;
+  }
+
+  .deleteImage {
+    position: absolute;
+    background-color: #00000070;
+    padding: 1rem;
+    width: fit-content;
+    height: fit-content;
+    top: 10rem;
+    right: 10rem;
+
+    &:hover{
+      background: #00000040;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.APIError {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 20rem;
+  }
+
+  button {
+    font-family: "Chirp-Bold";
+    font-size: 4rem;
+  }
+}

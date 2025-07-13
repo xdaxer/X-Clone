@@ -1,0 +1,9 @@
+@use "../../colors.scss" as colors;
+.container {
+  width: 320rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  margin-left: 63rem;
+}

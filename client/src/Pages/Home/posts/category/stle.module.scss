@@ -1,0 +1,26 @@
+@use "../../../../colors.scss" as colors;
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ffffff30;
+  border-left: 1px solid #ffffff30;
+  border-right: 1px solid #ffffff30;
+
+  align-items: center;
+
+  span {
+    font-size: 4rem;
+    font-family: "Chirp-Bold";
+    cursor: pointer;
+    padding: 3rem 0;
+
+    &:first-child {
+      border-bottom: 1rem solid colors.$baseColor;
+    }
+
+    &:last-child {
+      color: #ffffff70;
+    }
+  }
+}

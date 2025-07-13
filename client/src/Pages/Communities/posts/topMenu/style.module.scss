@@ -1,0 +1,29 @@
+.topMenu {
+  display: flex;
+  justify-content: space-between;
+ padding: 1rem 3rem;
+  .left {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: 4rem;
+
+    h2 {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+
+  .iconButtons {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    align-self: center;
+}
+
+  button {
+    background: transparent;
+    border: none;
+    width: fit-content;
+  }
+}

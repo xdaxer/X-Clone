@@ -1,0 +1,28 @@
+@use "../../../../../colors.scss" as colors;
+
+.Searchbar {
+  border: 1px solid #ffffff30;
+  border-radius: 999rem;
+  display: flex;
+  height: 10rem;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 1rem;
+  width: 100%;
+  img {
+    height: 4rem;
+  }
+
+  input {
+    display: flex;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    color: colors.$textColor;
+
+    &::placeholder {
+      color: colors.$textColor;
+    }
+  }
+}

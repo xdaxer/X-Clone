@@ -1,0 +1,182 @@
+@use "../../colors.scss" as colors;
+
+.post {
+  display: flex;
+  border-bottom: 1px solid #ffffff30;
+  border-left: 1px solid #ffffff30;
+  border-right: 1px solid #ffffff30;
+
+  &:first-child {
+    border-top: 1px solid #ffffff30;
+  }
+
+  padding: 4rem;
+
+  .profilePicture {
+    height: 10rem;
+    border-radius: 999rem;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2rem;
+
+    .name {
+      display: flex;
+      gap: 1rem;
+
+      b {
+        font-size: 4rem;
+        line-height: 5rem;
+        font-family: "Chirp-Bold";
+        color: colors.$textColor;
+      }
+
+      span {
+        font-size: 4rem;
+        line-height: 5rem;
+        color: #ffffff80;
+        font-family: "Chirp-Regular";
+      }
+    }
+
+    .postContent {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+      p {
+        font-size: 4rem;
+
+        line-height: 5rem;
+        font-family: "Chirp-Regular";
+        color: colors.$textColor;
+        margin-bottom: 1rem;
+        max-width: 127rem;
+
+        flex-wrap: wrap;
+        word-wrap: break-word;
+
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100rem;
+        border-radius: 4rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+        svg {
+          height: 7rem;
+          border-radius: 999rem;
+          padding: 1rem;
+          transition: background 0.2s ease;
+        }
+
+        span {
+          font-size: 3rem;
+          line-height: 4rem;
+          color: #ffffff80;
+          transition: color 0.2s ease;
+          font-family: "Chirp-Regular";
+        }
+
+        //!  Comments
+        &:hover .comments {
+          background: #1d9bf040;
+          path {
+            fill: colors.$baseColor;
+          }
+        }
+
+        &:hover .comments + span {
+          color: #1da1f2;
+        }
+
+        //! Retweet
+        &:hover .retweet {
+          background: #00ba7c40;
+          path {
+            fill: #00ba7c;
+          }
+        }
+
+        &:hover .retweet + span {
+          color: #00ba7c;
+        }
+
+        //! Like
+        &:hover .like {
+          background: #e0245e40;
+          path {
+            fill: #e0245e;
+          }
+        }
+
+        &:hover .like + span {
+          color: #e0245e;
+        }
+
+        //! Stat
+        &:hover .stat {
+          background: #1d9bf060;
+
+          path {
+            fill: colors.$baseColor;
+          }
+        }
+
+        &:hover .stat + span {
+          color: colors.$baseColor;
+        }
+      }
+
+      .rightButtons {
+        display: flex;
+        gap: 2rem;
+
+        svg {
+          height: 7rem;
+          padding: 1rem;
+          border-radius: 999rem;
+          fill: #ffffff70;
+          transition: background 0.2s ease, fill 0.2s ease;
+
+          &:hover {
+            background: #1da1f260;
+
+            path {
+              fill: #1da1f2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .liked {
+    fill: #e0245e;
+  }
+
+  path {
+    fill: #ffffff70;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

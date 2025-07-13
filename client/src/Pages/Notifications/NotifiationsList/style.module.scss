@@ -1,0 +1,58 @@
+@use "../../../colors.scss" as colors;
+
+.notificationsList {
+  width: 100%;
+  display: flex;
+  padding: 3rem 0;
+  flex-direction: column;
+  border-left: 1px solid #ffffff30;
+  border-right: 1px solid #ffffff30;
+
+  .topBar {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ffffff30;
+
+    h2 {
+      font-size: 5rem;
+      line-height: 6rem;
+      font-family: "Chirp-Bold";
+      margin-left: 4rem;
+    }
+  }
+
+  .notification {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 7rem 4rem;
+    border-top: 1px solid #ffffff30;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background: #ffffff10;
+    }
+
+    div {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      img {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 999rem;
+      }
+
+      p {
+        font-size: 4rem;
+        font-family: "Chirp-Regular";
+      }
+    }
+
+    span {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+}

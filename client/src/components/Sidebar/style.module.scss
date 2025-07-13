@@ -1,0 +1,203 @@
+@use "../../colors.scss" as colors;
+
+.sidebar {
+  /* border-right: .0625rem solid #71767b; */
+  min-height: 100%;
+  width: 100%;
+  max-width: 63rem;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  color: colors.$textColor;
+  padding: 4rem 0;
+  user-select: none;
+  position: fixed;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.logo {
+  img {
+    height: 7rem;
+    padding: 0 5rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+
+  .shareButton {
+    background: colors.$textColor;
+    margin-top: 2rem;
+    width: 90%;
+    padding: 7rem 10rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    pre {
+      color: colors.$backgroundColor;
+      font-size: 4rem;
+      line-height: 4rem;
+      font-weight: 400;
+      font-family: "Chirp-Bold";
+    }
+  }
+
+  div {
+    display: flex;
+    padding: 1rem 5rem;
+    justify-content: start;
+    width: fit-content;
+    height: 12rem;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 6rem;
+    align-items: center;
+    gap: 6rem;
+    border-radius: 999rem;
+    cursor: pointer;
+    font-family: "Chirp-Regular";
+
+    &:hover {
+      background-color: colors.$ButtonHoverColor;
+      transition: 300ms;
+    }
+    span {
+      cursor: pointer;
+    }
+
+    img {
+      height: 7rem;
+    }
+  }
+
+  .moreButtons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: fit-content;
+    width: 100%;
+    background: colors.$backgroundColor;
+    border: 1px solid #71767b;
+    border-radius: 3rem;
+    box-shadow: 3px 3px 51px 8px rgba(255, 255, 255, 0.32);
+    -webkit-box-shadow: 3px 3px 51px 8px rgba(255, 255, 255, 0.32);
+    -moz-box-shadow: 3px 3px 51px 8px rgba(255, 255, 255, 0.32);
+    ul {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        padding: 3rem;
+        list-style: none;
+        color: colors.$textColor;
+        font-size: 5rem;
+        font-family: "Chirp-Bold";
+        cursor: pointer;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+
+        svg {
+          height: 5rem;
+        }
+        &:hover {
+          background-color: #ffffff10;
+        }
+      }
+    }
+  }
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 999rem;
+  height: 16rem;
+  align-items: center;
+  padding: 0 4rem;
+  cursor: pointer;
+  margin-top: 10rem;
+  position: relative;
+
+  .info {
+    display: flex;
+    gap: 3rem;
+    img {
+      height: 10rem;
+      border-radius: 999rem;
+    }
+    .name {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      b {
+        font-size: 4rem;
+        line-height: 5rem;
+        font-weight: 400;
+        font-family: "Chirp-Bold";
+      }
+
+      span {
+        font-size: 4rem;
+        line-height: 5rem;
+        font-family: "Chirp-Regular";
+        color: #71767b;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: colors.$ButtonHoverColor;
+  }
+
+  button {
+    padding: 0 2rem;
+    background-color: transparent;
+    width: 1rem;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.logoutMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: fit-content;
+  width: 100%;
+  background: colors.$backgroundColor;
+  border: 1px solid #71767b;
+  border-radius: 3rem;
+
+  span {
+    padding: 3rem;
+    list-style: none;
+    color: colors.$textColor;
+    font-size: 3rem;
+    font-family: "Chirp-Bold";
+    cursor: pointer;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+}

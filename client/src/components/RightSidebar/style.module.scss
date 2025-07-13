@@ -1,0 +1,15 @@
+@use "../../colors.scss" as colors;
+
+.rightSidebar {
+  padding: 3rem 0;
+  gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+ 
+.bottom{
+    position: sticky;
+    top: 15rem;
+}
+}
+

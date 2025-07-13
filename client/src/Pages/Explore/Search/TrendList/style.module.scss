@@ -1,0 +1,60 @@
+@use "../../../../colors.scss" as colors;
+
+.TrendList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .trend {
+    display: flex;
+    justify-content: space-between;
+    padding:  4rem;
+
+    cursor: pointer;
+
+    .text {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+
+      p {
+        font-size: 3rem;
+        color: #ffffff70;
+        line-height: 4rem;
+        font-family: "Chirp-Regular";
+      }
+
+      span {
+        color: colors.$textColor;
+        font-size: 4rem;
+        line-height: 5rem;
+         font-family: "Chirp-Bold";
+      }
+    }
+
+    button {
+      background: transparent;
+      width: 10rem;
+
+      &:hover {
+        background: #1d9bf040;
+      }
+    }
+
+    &:hover {
+      background: #ffffff20;
+    }
+  }
+
+  img {
+    height: 4rem;
+  }
+  .more {
+    color: colors.$baseColor;
+    cursor: pointer;
+    font-size: 4rem;
+    line-height: 5rem;
+    padding: 4rem;
+    font-family: "Chirp-Regular";
+  }
+}
