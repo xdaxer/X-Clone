@@ -69,7 +69,7 @@ npm start
 
 ### DEMO 
 
-🌐 Live Demo: [[socialmedia.daxer.dev]](https://socialmedia.daxer.dev/)
+🌐 Live Demo: [socialmedia.daxer.dev](https://socialmedia.daxer.dev/)
 
 
 # 💬 Feedback
