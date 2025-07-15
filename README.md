@@ -5,6 +5,11 @@
 
 A **full-stack social media platform** that replicates the core features of Twitter (now X), built using modern web technologies. The project includes **real-time messaging**, **user authentication**, **post creation with media**, and a **like system**, all designed with a clean and responsive user interface.
 
+### DEMO 
+
+🌐 Live Demo: [socialmedia.daxer.dev](https://socialmedia.daxer.dev/)
+
+
 ## 🚀 Features
 
 - 🔐 **JWT-Based Authentication** — Secure user login and protected routes
@@ -67,9 +72,6 @@ npm start
 
 ```
 
-### DEMO 
-
-🌐 Live Demo: [socialmedia.daxer.dev](https://socialmedia.daxer.dev/)
 
 
 # 💬 Feedback
